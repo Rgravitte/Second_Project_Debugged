@@ -16,7 +16,7 @@ require('./config/passport');
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/second-project', {useNewUrlParser: true})
+  .connect(process.env.MONGODB_URI, {useMongoClient: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
