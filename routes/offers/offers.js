@@ -5,9 +5,13 @@ const User = require('../../models/Users');
 
 router.get('/offers-page', (req, res, next)=>{
  
-  res.render('offers/offers-page');
-  Offer.findOne()
-  .then((industry)=>{
+ 
+  Offer.find()
+  .then((response)=>{
+    console.log('===========&&&&&&&&&&&============&&&&&&&&&&============', response)
+
+    res.render('offers/offers-page');
+
 
   })
 

@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const interestsSchema = new Schema({
-  interest: String,
+const dealSchema = new Schema({
+  isAccepted: Boolean,
+  deals: {type: Schema.Types.ObjectId, ref: 'Deals'}
 })
 
 
-const Interests = mongoose.model("Interests", companySchema);
+const Deals = mongoose.model("Deals", companySchema);
 
 
-module.exports = Interests;
+module.exports = Deals;
