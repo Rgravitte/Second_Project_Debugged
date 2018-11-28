@@ -1,0 +1,26 @@
+<div class="user-page-div">
+  <div class="user-info-div">
+  <h1>Welcome, {{theUser.username}}!</h1>
+      {{!-- {{#each theUser}} --}}
+      <label>interests: </label>
+      <ul>{{theUser.interests}}</ul>
+      <button><a href='/edit-interests'>edit interests</a></button>
+      <hr class="style-four">
+      <label>First Name: </label>
+      <ul>{{theUser.firstName}}</ul>
+      <hr class="style-four">
+      <label>Last Name: </label>
+      <ul>{{theUser.lastName}}</ul>
+      <hr class="style-four">
+      <label>Date of birth:  </label>
+      <ul>{{theUser.birthday}}</ul>
+      {{!-- {{/each}} --}}
+      {{!-- <li class='userInterestDiv'>{{this.interests}}</li> --}}
+      {{!-- <li class='userInterestDiv'>{{this.firstName}}</li>
+      <li class='userInterestDiv'>{{this.lastName}}</li>
+      <li class='userInterestDiv'>{{this.birthday}}</li> --}}
+      </ul>
+      <button><a href='/offers-page'>click here to check out your offers</a></button>
+    {{!-- <div class='userInterestDiv'>{{theUser.interests}}</div> --}}
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<section class="signup-section container">
+<form action='/users/signup-page' method="POST" class="signup-form">
+
+<h3>Signup to recieve special offers</h3>
+
+
+<div class="signup-info row">
+  <label class="signup-lables col-2">Username: </label>
+    <input type="text" name="username" placeholder="username" class="signup-inputs col-3">
+  <label class="signup-lables col-2">Password: </label>
+  <input type="password" name="password" placeholder="password" class="signup-inputs col-3">
+    <label class="signup-lables col-2">Birthday: </label>
+  <input type="date" name="birthday" placeholder="Date of birth" class="signup-inputs col-3">
+    <label class="signup-lables col-2">First Name: </label>
+  <input type="text" name="firstName" placeholder="Name" class="signup-inputs col-3">
+  <label class="signup-lables col-2">Last Name: </label>
+  <input type="text" name="lastName" placeholder="Last Name" class="signup-inputs col-3">
+  </div>
+   
+  
+  <p><label>Interests - </label><br>Check all that apply</p>
+    <label class="signup-labels">Food</label><input class="singup-labelse" type="checkbox" name="interests" value='Food'><br>
+    <label class="signup-labels">Media</label><input class="singup-labelse" type="checkbox" name="interests" value='Media'><br>
+    <label class="signup-labels">Sports</label><input class="singup-labelse" type="checkbox" name="interests" value='Sports'><br>
+    <label class="signup-labels"> Video Games</label><input class="singup-labelse" type="checkbox" name="interests" value='Video Games'><br>
+    <label class="signup-labels">Night Life</label><input class="singup-labelse" type="checkbox" name="interests" value='Night Life'><br>
+    <label class="signup-labels">Travel</label><input class="singup-labelse" type="checkbox" name="interests" value='Travel'><br>
+
+  <input type="submit"  placeholder="signup">
+</form>
+</section>

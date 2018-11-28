@@ -1,0 +1,230 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  // background-color: white;
+  // border: 150px solid white;
+  // height:100%;
+  height: auto;
+  // border-left: 90px solid white;
+  // border-right: 90px solid white;
+  background-image: url('/images/thirdtry.jpg');
+  // background-size: cover;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.app-header{
+  margin: 10;
+  padding:20px;
+  padding-bottom: 10px;
+  text-align: center;
+  height: 150px;
+  background-color: navy;
+  width: 50vw;
+  color: white;
+  border: 5px solid greenyellow;
+  border-radius: 50px;
+}
+
+.app-name{
+  color: white;
+  font-family:fantasy;
+  padding-top: 40px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: white(69, 69, 70);
+}
+
+.home-page-div{
+  border: 5px solid greenyellow;
+  border-style: double;
+  // background-color: navy;
+  color: white;
+  text-align: center;
+  width: 25vw;
+  padding: 25px;
+  border-radius: 50x;
+}
+
+.home-page-section{
+  display: flex;
+  // border-left: 150px solid white;
+  // border-right: 150px solid white;
+  justify-content: center;
+  padding: 25px;
+}
+
+.top-head-section{
+  display: flex;
+  justify-content: center;
+}
+
+.signup-section{
+  display: flex;
+  width: 100vw;
+  // text-align: center;
+  justify-content: center;
+  flex-direction: row;
+  // margin-left:-200px;
+  align-content: center;
+}
+
+.signup-form{
+  border: 10px solid greenyellow;
+  background-color: navy;
+  color: white;
+  justify-content: center;
+  border-radius: 25px;
+  width: 60vw;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.userInterestDiv{
+font-size: 200%;
+display: block;
+color: rgb(20, 224, 20);
+}
+
+.signup-login-main{
+  background-color: navy;
+  color: white;
+  float: right;
+  margin-right: 10px;
+}
+
+.login-page-main{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.another-login-div{
+  width: 50%;
+  background-color: navy;
+  color: white;
+  margin-top: 25px;
+  border: 5px solid greenyellow;
+  padding: 20px;
+  border-radius: 25px;
+}
+.login-page-main h2{
+  text-align: center;
+
+}
+
+.signup-info{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+// .signup-info label input{
+//   margin: 10px;
+//   padding: 5px;
+//   text-align: center;
+//   display: flex;
+//   justify-content: space-between;
+//   width: 10%;
+// } 
+
+.signup-labels{
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.signup-inputs{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.user-info-div{
+  background-color: navy;
+  color: greenyellow;
+  width: 50vw;
+  // margin-left: -150px;
+  justify-content: center; 
+  border: 5px solid greenyellow;
+  border-radius: 25px;
+}
+
+.offers-page-div{
+  justify-content: center;
+  width: 70vw;
+  color: white;
+  // margin-left: -400px;
+  // background-color: black;
+  border: 5px solid greenyellow;
+  border-radius: 20px;
+}
+
+//   hr .style-four {
+//     height: 12px;
+//     border: 0;
+//     box-shadow: inset 0 12px 12px -12px rgba(255, 255, 255, 0.5);
+// }
+.offers-page-outer-div{
+  width: 100vw;
+  display: flex;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.edit-interests-div{
+  text-align: center;
+}
+
+.user-page-div{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  margin-top: 30px;
+}
+
+.edit-interests-outer-div{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+}
+
+.edit-interests-div{
+  width: 50vw;
+  justify-content: center;
+  border: 5px solid greenyellow;
+  border-radius: 24px;
+  background-color: navy;
+  color: white;
+  // margin-left: -400px;
+  margin-top: 25px;
+}
+
+.signup-login-not-main{
+  float: left;
+}
+
+.home-page-section{
+  margin-top: 75px;
+  padding: 50px;
+}
+
+#p-tag-that-need-to-be-centered{
+  text-align: center;
+  margin-right: -30px;
+}
+.body-border-div-good-practice{
+  // border: 20px solid white;
+  height: auto;
+  
+}

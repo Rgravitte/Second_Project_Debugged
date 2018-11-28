@@ -1,0 +1,25 @@
+<div class="login-page-main">
+  <div class="another-login-div">
+<h4>Enter Your Username & Password</h4>
+
+<br>
+{{!-- this action has to match the post route on the user-routes paghe --}}
+<form action='/user-login-page' method="POST">
+<label>Username: </label>
+<input type="text" placeholder="Username" name="username">
+<br>
+<br>
+<label>Password: </label>
+<input type="text" placeholder="Password" name="password">
+<br>
+
+{{#if message}}
+    <div class="error-message">{{ message }}</div>
+{{/if}}
+<br>
+<button type="submit">Login</button>
+
+
+</form>
+</div>
+</div>
