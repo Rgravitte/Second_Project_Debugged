@@ -4,7 +4,10 @@ body {
   background-image: url("/images/thirdtry.jpg"); }
 
 a {
-  color: #00B7FF; }
+  color: black; }
+
+button {
+  border-radius: 10px; }
 
 .app-header {
   margin: 10;
@@ -29,6 +32,7 @@ a {
 .home-page-div {
   border: 5px solid greenyellow;
   border-style: double;
+  background-color: navy;
   color: white;
   text-align: center;
   width: 25vw;
@@ -47,9 +51,7 @@ a {
 .signup-section {
   display: flex;
   width: 100vw;
-  justify-content: center;
-  flex-direction: row;
-  align-content: center; }
+  justify-content: center; }
 
 .signup-form {
   border: 10px solid greenyellow;
@@ -92,11 +94,8 @@ a {
   text-align: center; }
 
 .signup-info {
-  display: flex;
-  justify-content: center;
   padding: 5px;
-  flex-direction: row;
-  flex-wrap: wrap; }
+  margin-left: 200px; }
 
 .signup-labels {
   width: 30px;
@@ -115,14 +114,18 @@ a {
   background-color: navy;
   color: greenyellow;
   width: 50vw;
+  padding: 20px;
   justify-content: center;
   border: 5px solid greenyellow;
   border-radius: 25px; }
 
 .offers-page-div {
   justify-content: center;
-  width: 70vw;
+  width: 60vw;
   color: white;
+  margin-top: 60px;
+  padding: 30px;
+  background-color: navy;
   border: 5px solid greenyellow;
   border-radius: 20px; }
 
@@ -170,5 +173,14 @@ a {
 
 .body-border-div-good-practice {
   height: auto; }
+
+.signup-section h5 {
+  text-align: center;
+  padding: 20px;
+  text-decoration: underline; }
+
+.button-centered {
+  margin-left: 380px;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=style.css.map */

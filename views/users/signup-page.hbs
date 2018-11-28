@@ -1,35 +1,48 @@
 <section class="signup-section container">
 <form action='/users/signup-page' method="POST" class="signup-form">
 
-<h3>Signup to recieve special offers</h3>
+<h5>Signup to recieve special offers</h5>
 
 
-<div class="signup-info row">
-  <div>
-    <label class="signup-lables">Username: </label>
-    <input type="text" name="username" placeholder="username" class="signup-inputs">
+<div class="signup-info">
+  <div class='row'>
+    <label class="signup-lables col-3">Username: </label>
+    <input type="text" name="username" placeholder="username" class="signup-inputs col-6">
   </div>
-  <div>
-  <label class="signup-lables col-2">Password: </label>
-  <input type="password" name="password" placeholder="password" class="signup-inputs col-3">
-    </div>
-    <label class="signup-lables col-2">Birthday: </label>
-  <input type="date" name="birthday" placeholder="Date of birth" class="signup-inputs col-3">
-    <label class="signup-lables col-2">First Name: </label>
-  <input type="text" name="firstName" placeholder="Name" class="signup-inputs col-3">
-  <label class="signup-lables col-2">Last Name: </label>
-  <input type="text" name="lastName" placeholder="Last Name" class="signup-inputs col-3">
+  <br>
+  <div class='row'>
+    <label class="signup-lables col-3">Password: </label>
+    <input type="password" name="password" placeholder="password" class="signup-inputs col-6">
+  </div>
+  <br>
+  <div class='row'>
+    <label class="signup-lables col-3">Birthday: </label>
+    <input type="date" name="birthday" placeholder="Date of birth" class="signup-inputs col-6">
+   </div> 
+   <br>
+   <div class='row'>
+    <label class="signup-lables col-3">First Name: </label>
+    <input type="text" name="firstName" placeholder="Name" class="signup-inputs col-6">
+  </div>
+  <br>
+  <div class='row'>
+    <label class="signup-lables col-3">Last Name: </label>
+    <input type="text" name="lastName" placeholder="Last Name" class="signup-inputs col-6">
+  </div>
   </div>
    
   
-  <p><label>Interests - </label><br>Check all that apply</p>
-    <label class="signup-labels">Food</label><input class="singup-labelse" type="checkbox" name="interests" value='Food'><br>
-    <label class="signup-labels">Media</label><input class="singup-labelse" type="checkbox" name="interests" value='Media'><br>
-    <label class="signup-labels">Sports</label><input class="singup-labelse" type="checkbox" name="interests" value='Sports'><br>
-    <label class="signup-labels"> Video Games</label><input class="singup-labelse" type="checkbox" name="interests" value='Video Games'><br>
-    <label class="signup-labels">Night Life</label><input class="singup-labelse" type="checkbox" name="interests" value='Night Life'><br>
-    <label class="signup-labels">Travel</label><input class="singup-labelse" type="checkbox" name="interests" value='Travel'><br>
-
-  <input type="submit"  placeholder="signup">
+  <h5>Interests - check all that apply</h5><br>
+    <div class='row'>
+    <label class="signup-labels col-3">Food</label><input class="singup-labelse col-1" type="checkbox" name="interests" value='Food'>
+    <label class="signup-labels col-3">Media</label><input class="singup-labelse col-1" type="checkbox" name="interests" value='Media'>
+    <label class="signup-labels col-3">Sports</label><input class="singup-labelse col-1" type="checkbox" name="interests" value='Sports'>
+    </div>
+    <div class='row'>
+    <label class="signup-labels col-3"> Video Games</label><input class="singup-labelse col-1" type="checkbox" name="interests" value='Video Games'>
+    <label class="signup-labels col-3">Night Life</label><input class="singup-labelse col-1" type="checkbox" name="interests" value='Night Life'>
+    <label class="signup-labels col-3">Travel</label><input class="singup-labelse col-1" type="checkbox" name="interests" value='Travel'>
+    </div>
+  <button type="submit" class='btn-primary button-centered' placeholder="signup">Sign Up</button>
 </form>
 </section>
