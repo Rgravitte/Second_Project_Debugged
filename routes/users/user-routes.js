@@ -1,7 +1,7 @@
 const express = require('express');
 const router  = express.Router();
 const passport = require('passport');
-const bcrypt   = require('bcryptjs');
+const bcryptjs   = require('bcryptjs');
 const session     = require('express-session');
 const User = require('../../models/Users');
 
@@ -19,8 +19,8 @@ router.get('/login', (req, res, nexrt)=>{
 
 router.post('/users/signup-page', (req, res, next)=>{
 
-const salt = bcrypt.genSaltSync(10);
-const hashPass = bcrypt.hashSync(req.body.password, salt);
+const salt = bcryptjs.genSaltSync(10);
+const hashPass = bcryptjs.hashSync(req.body.password, salt);
 
   User.create({
     username: req.body.username,
@@ -66,7 +66,7 @@ router.post('/user-login-page', (req, res, next) => {
       res.render('users/user-login-page', {message})
       return;
     }
-    const isPassGood = bcrypt.compareSync(req.body.password, theUser.password)
+    const isPassGood = bcryptjs.compareSync(req.body.password, theUser.password)
     // console.log("---------------- ", isPassGood);
     if(isPassGood === false){
       message = `invalid password`;

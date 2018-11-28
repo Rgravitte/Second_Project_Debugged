@@ -1,5 +1,5 @@
 const LocalStrategy = require('passport-local').Strategy;
-const bcrypt        = require('bcrypt');
+const bcryptjs        = require('bcryptjs');
 const passport      = require('passport');
 const session       = require('express-session');
 const User          = require('../models/Users');
@@ -26,7 +26,7 @@ passport.serializeUser((user, cb) => {
         // res.redirect('users/user-login-page');
         return next(null, false, { message: "Incorrect username" });
       }
-      if (!bcrypt.compareSync(password, user.password)) {
+      if (!bcryptjs.compareSync(password, user.password)) {
         // res.redirect('users/user-login-page');
         return next(null, false, { message: "Incorrect password" });
       }
