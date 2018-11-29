@@ -6,22 +6,16 @@ const session     = require('express-session');
 const User = require('../../models/Users');
 
 router.get('/signup', (req, res, next)=>{
-
   res.render('users/signup-page')
-
 });
 
 router.get('/login', (req, res, nexrt)=>{
- 
   res.render('users/user-login-page');
-
 });
 
 router.post('/users/signup-page', (req, res, next)=>{
-
 const salt = bcryptjs.genSaltSync(10);
 const hashPass = bcryptjs.hashSync(req.body.password, salt);
-
   User.create({
     username: req.body.username,
     password: hashPass,
@@ -38,8 +32,6 @@ const hashPass = bcryptjs.hashSync(req.body.password, salt);
         res.redirect('/user-page')
       }
     })
-  //   console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=', User);
-  //   res.redirect('/users/user-page')
   })
   .catch((err)=>{
     console.log('09090909090909090909090909090909090909090909090909090', err);
@@ -47,33 +39,21 @@ const hashPass = bcryptjs.hashSync(req.body.password, salt);
   })
 });
 
-// router.post("/users/user-login-page", passport.authenticate("local", {
-//   successRedirect: '/',
-//   failureRedirect: '/users/user-login-page',
-//   failureFlash: true,
-//   passReqToCallback: true
-
-// }));
-
-//post route has to match the action of the form on the hbs page
 router.post('/user-login-page', (req, res, next) => {
   User.findOne({username: req.body.username})
   .then((theUser)=>{
     message = false
     if(theUser === null){
-      // res.locals.message = `there is no username: ${req.body.username}`;
       message = `there is no username: ${req.body.username}`;
       res.render('users/user-login-page', {message})
       return;
     }
     const isPassGood = bcryptjs.compareSync(req.body.password, theUser.password)
-    // console.log("---------------- ", isPassGood);
     if(isPassGood === false){
       message = `invalid password`;
       res.render('users/user-login-page', {message})
       return;
     }
-    // console.log("================ ", isPassGood);
     req.login(theUser, (err)=>{
       if(err){
         next(err);
@@ -87,25 +67,29 @@ router.post('/user-login-page', (req, res, next) => {
     next(err);
   })
 })
-// router.get('/blah-page', (req, res, next)=>{
-//   res.render('blah');
-// })
-// router.post('/users/user-page', (reqm, res, next)=>{
-  //do i need this to display secret "User" information? \
-// })
 
 router.get('/user-page', (req, res, next)=>{
   if(!req.user){
     res.redirect('users/user-login-page')
   } else {
+    let theUser = req.user;
+    theUser.prettyDate = theUser.birthday.toLocaleDateString("en-US");
     res.render('users/user-page');
   }
 })
 
+router.get('/delete-page/:id', (req, res, next)=>{
+  console.log(req.params, req.query)
+  console.log('the ------- user ------- has -------- been -------- deleted')
+  User.findByIdAndRemove(req.params.id)
+  .then(()=>{
+    res.redirect('/');
 
-
-
-
+  })
+  .catch((err)=>{
+    next(err);
+  })
+})
 
 router.get('/edit-interests', (req, res, next)=>{
   res.render('users/edit-interests');
@@ -113,7 +97,6 @@ router.get('/edit-interests', (req, res, next)=>{
 
 
 router.post('/edit-interests', (req, res, next)=>{
-  // console.log('anythinghjfaeklrhjfgi;laj;', req.user)
   User.findByIdAndUpdate(req.user.id, {
     interests: req.body.interests
   })
@@ -129,21 +112,9 @@ router.post('/edit-interests', (req, res, next)=>{
   })
 })
 
-
-
-
-
-
-
-
 router.get('/logout', (req, res, next)=>{
     req.logout();
     res.redirect('/');
 })
 
-  
-
-// router.get('/profile', (req, res, next)=>{
-//     res.render('profile');
-//     })
 module.exports = router;

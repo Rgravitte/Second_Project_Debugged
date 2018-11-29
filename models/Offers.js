@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const offerSchema = new Schema({
 
-  // companyName: String,
+  companyName: String,
   industry: String,
   user: {type: Schema.Types.ObjectId, ref: 'User'},
   

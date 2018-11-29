@@ -1,5 +1,9 @@
+
+
+
 <div class="user-page-div">
   <div class="user-info-div">
+    <button class='btn-danger bg-danger'><a href='/delete-page/{{theUser._id}}'>delete account</a></button>
   <h3>Welcome, {{theUser.username}}!</h3>
       {{!-- {{#each theUser}} --}}
       <label>interests: </label>
@@ -13,7 +17,7 @@
       <ul>{{theUser.lastName}}</ul>
       <hr class="style13 bg-success"><br>
       <label>Date of birth:  </label>
-      <ul>{{theUser.birthday}}</ul>
+      <ul>{{theUser.prettyDate}}</ul>
       {{!-- {{/each}} --}}
       {{!-- <li class='userInterestDiv'>{{this.interests}}</li> --}}
       {{!-- <li class='userInterestDiv'>{{this.firstName}}</li>

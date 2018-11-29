@@ -8,14 +8,20 @@ router.get('/offers-page', (req, res, next)=>{
  
   Offer.find()
   .then((response)=>{
+    
+    
     console.log('===========&&&&&&&&&&&============&&&&&&&&&&============', response)
-
-    res.render('offers/offers-page');
-
+    const equalInterests = response.filter((offer)=>{
+      for(let i = 0; i < req.user.interests.length; i++){
+        if(offer.industry === req.user.interests[i]){
+          return response + offer;
+        }
+      }
+    })
+    res.render('offers/offers-page', {offer: equalInterests})
 
   })
-
-});
+})
 
 router.post('/offers-page', (req, res, next)=>{
 Offer.create({
@@ -24,7 +30,7 @@ Offer.create({
   // user: Object.Types
 })
 .then(()=>{
-      res.redirect('/offers-page')
+  res.redirect('/offers-page')
   console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=', Offer);
 //   res.redirect('/users/user-page')
 })
@@ -33,5 +39,4 @@ Offer.create({
   next(err)
 })
 })
-
 module.exports = router;

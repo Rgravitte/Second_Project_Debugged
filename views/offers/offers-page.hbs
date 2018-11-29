@@ -13,26 +13,21 @@
 <button type="submit">Login</button>
 
 </form> --}}
+{{#each offer}}
 <div class="offers-page-outer-div">
 <div class="offers-page-div">
-{{#each Offer}}
 
-<h3>{{this.companyName}}</h3>
-<h4> {{this.industry}}</h4>
+ 
 
-<p>jnfgioeprajgojreasiopjgiorpeasjigojresoipjgioraejfgijaeiosjfioearwjiopfjewaiopjfiojewaiopjfioaejw</p>
+<div><label>Company:     </label>{{this.companyName}}</div><br>
+<div><label>Industry:     </label>{{this.industry}}</div><br>
 
-<p>need this to get to work  --- want it to match the interests of users and appear through the user--page</p>
+  <div><label>Discount: </label>enjoy 50% off of everything</div><br>
 
 
-  {{/each}}
-<div>
-
-  this should be a company name - do i want to connect companies through mongoDB?? idk
-</div>
-<h1>NIKE</h1>
-<p>deal: 30% off all sneakers</p>
 <a href='/user-page'><button class='btn-success bg-success'>Accept</button></a>
 <a href='/user-page'><button class='btn-danger bg-danger'>No Thanks</button></a>
 </div>
+
 </div>
+{{/each}}
