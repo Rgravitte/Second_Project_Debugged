@@ -1,7 +1,7 @@
 const express = require('express');
 const router  = express.Router();
-const Offer = require('../../models/Offers');
 const User = require('../../models/Users');
+const Offer = require('../../models/Offers');
 
 router.get('/offers-page', (req, res, next)=>{
  
@@ -19,6 +19,10 @@ router.get('/offers-page', (req, res, next)=>{
     })
     res.render('offers/offers-page', {offer: equalInterests})
 
+  })
+  .then(()=>{
+    // if the deals accepted === fals then i want to delete the deals
+    //if the deals accepted === true then i want to add the deals to the user page
   })
 })
 

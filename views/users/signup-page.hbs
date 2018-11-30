@@ -4,7 +4,7 @@
 <h5>Signup to receive special offers</h5>
 
 
-<div class="signup-info">
+<div class="signup-info container">
   <div class='row'>
     <label class="signup-lables col-3">Username: </label>
     <input type="text" name="username" placeholder="username" class="signup-inputs col-6">
@@ -30,8 +30,8 @@
     <input type="text" name="lastName" placeholder="Last Name" class="signup-inputs col-6">
   </div>
   </div>
-   
-  
+   {{!-- <div class='col-4'></div> --}}
+  <div class='container'>
   <h5>Interests - check all that apply</h5><br>
     <div class='row'>
     <label class="signup-labels col-3">Food</label><input class="singup-labelse col-1" type="checkbox" name="interests" value='Food'>
@@ -43,6 +43,8 @@
     <label class="signup-labels col-3">Night Life</label><input class="singup-labelse col-1" type="checkbox" name="interests" value='Night Life'>
     <label class="signup-labels col-3">Travel</label><input class="singup-labelse col-1" type="checkbox" name="interests" value='Travel'>
     </div>
-</div>
+    </div>
+    {{!-- <div class='col-4'></div> --}}
   <button type="submit" class='btn-primary button-centered' placeholder="signup">Sign Up</button>
+</div>
 </form>
