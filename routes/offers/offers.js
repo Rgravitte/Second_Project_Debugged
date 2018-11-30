@@ -5,12 +5,11 @@ const User = require('../../models/Users');
 
 router.get('/offers-page', (req, res, next)=>{
  
- 
   Offer.find()
   .then((response)=>{
     
     
-    console.log('===========&&&&&&&&&&&============&&&&&&&&&&============', response)
+    console.log('===========&&&&&&&&&&&============&&&&&&&&&&===========', response)
     const equalInterests = response.filter((offer)=>{
       for(let i = 0; i < req.user.interests.length; i++){
         if(offer.industry === req.user.interests[i]){
@@ -39,4 +38,8 @@ Offer.create({
   next(err)
 })
 })
+
+
+
+
 module.exports = router;
