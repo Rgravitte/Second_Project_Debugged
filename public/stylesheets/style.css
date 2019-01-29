@@ -9,17 +9,16 @@ a {
 button {
   border-radius: 10px; }
 
-.app-header {
-  margin: 10;
-  padding: 20px;
-  padding-bottom: 10px;
-  text-align: center;
-  height: 150px;
-  background-color: #000081;
-  width: 50vw;
-  color: #85FFC7;
-  border: 5px solid #85FFC7;
-  border-radius: 50px; }
+  .app-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 211px;
+    background-color: #000081;
+    color: #85FFC7;
+    border-radius: 50px;
+}
 
 .app-name {
   color: white;
@@ -69,10 +68,10 @@ button {
   color: #85FFC7; }
 
 .signup-login-main {
-  background-color: #000081;
-  color: white;
-  float: right;
-  margin-right: 10px; }
+    color: white;
+    float: left;
+    margin-right: 10px;
+}
 
 .login-page-main {
   display: flex;
@@ -110,14 +109,13 @@ button {
   flex-direction: row;
   flex-wrap: wrap; }
 
-.user-info-div {
-  background-color: #000081;
-  color: #85FFC7;
-  width: 50vw;
-  padding: 20px;
-  justify-content: center;
-  border: 5px solid #85FFC7;
-  border-radius: 25px; }
+  .user-info-div {
+    background-color: #000081;
+    color: white;
+    padding: 45px;
+    justify-content: center;
+    border-radius: 25px;
+}
 
 .offers-page-div {
   justify-content: center;
@@ -162,7 +160,7 @@ button {
   margin-top: 25px; }
 
 .signup-login-not-main {
-  float: left; }
+  float: right; }
 
 .home-page-section {
   margin-top: 75px;
@@ -183,5 +181,11 @@ button {
 .button-centered {
   margin-left: 350px;
   margin-top: 20px; }
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /*# sourceMappingURL=style.css.map */

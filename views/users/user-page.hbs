@@ -3,9 +3,10 @@
 
 <div class="user-page-div">
   <div class="user-info-div">
-    <button class='btn-danger bg-danger'><a href='/delete-page/{{theUser._id}}'>delete account</a></button>
+    <button class='btn-danger bg-danger'>
+      <a href='/delete-page/{{theUser._id}}'>delete account</a>
+    </button>
   <h3>Welcome, {{theUser.username}}!</h3>
-      {{!-- {{#each theUser}} --}}
       <label>interests: </label>
       <ul>{{theUser.interests}}</ul>
       <button class='btn-warning bg-warning'><a href='/edit-interests'>edit interests</a></button>
@@ -18,13 +19,9 @@
       <hr class="style13 bg-success"><br>
       <label>Date of birth:  </label>
       <ul>{{theUser.prettyDate}}</ul>
-      {{!-- {{/each}} --}}
-      {{!-- <li class='userInterestDiv'>{{this.interests}}</li> --}}
-      {{!-- <li class='userInterestDiv'>{{this.firstName}}</li>
-      <li class='userInterestDiv'>{{this.lastName}}</li>
-      <li class='userInterestDiv'>{{this.birthday}}</li> --}}
       </ul>
-      <button class='btn-success bg-success'><a href='/offers-page'>click here to check out your offers</a></button>
-    {{!-- <div class='userInterestDiv'>{{theUser.interests}}</div> --}}
+      <button class='btn-success bg-success'>
+        <a href='/offers-page'>click here to check out your offers</a>
+      </button>
   </div>
 </div>
